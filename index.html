@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Are You Human?</title>
+    <style>
+        body {
+            background-color: rgb(0, 159, 255);
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+            font-size: 50px;
+        }
+
+        .m {
+            width: 60%;
+            margin: auto;
+            background-color: rgb(255, 96, 0);
+            padding: 10px;
+            border-radius: 10px;
+            color: lightgrey;
+            font-size: 20px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 30px;
+        }
+
+        button {
+            background-color: green;
+            color: lightblue;
+            padding: 4px;
+            width: 20%;
+            border: 3px solid white;
+        }
+
+        img {
+            background-color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Are You Human?</h1>
+    <div id="0" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>domain</strong> are you?</p>
+    </div>
+    <div id="1" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="2" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="3" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as a single celled organism.</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <div id="4" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as either a plant or some algae.</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <div id="5" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="6" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="7" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as either a mushroom, yeast, cordyceps, or the like.</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <div id="8" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="9" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="10" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="11" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as a sponge.</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <div id="12" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="13" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as either a jellyfish, a sea anemone, coral, or a hydra (the animal hydra, not the 9-headed myth or the moon of Pluto, named so because of its regeneration abilities).</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <div id="14" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as a comb jelly.</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <div id="15" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as a clump of cells that barely counts as a animal.</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <div id="16" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="17" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="18" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="19" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="20" class="m">
+        <h2>Answer the Question</h2>
+        <p>What <strong>branch</strong> do you fall on?</p>
+    </div>
+    <div id="21" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as a worm.</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <div id="22" class="m">
+        <h2>You Failed</h2>
+        <p>You're stuck as either a starfish, sea urchin, sea cucumber, or the like.</p>
+        <button onclick="location.reload()">Retry</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="slide_miodified.js"></script>
+    <script>
+        const endings = [3, 4, 7, 11, 13, 14, 15, 21, 22]
+        const ans = [
+            [["Eukaryota", 1], ["Bacteria", endings[0]], ["Archaea", endings[0]]],
+            [["Amphorea", 2], ["Chromalveolata", endings[0]], ["Archaeplastida", endings[1]], ["Excavata", endings[0]]],
+            [["Amoebozoa", endings[0]], ["Opisthokonta", 5]],
+            [],
+            [],
+            [["Holozoa", 6], ["Holomycota", 8]], //5
+            [["Metazoa", 9], ["Choanoflagellates", endings[0]], ["Filasterea", endings[0]], ["Icthyosporea", endings[0]]], //6
+            [],
+            [["Fungi", endings[2]], ["Nucleariidae", endings[0]]], //8
+            [["Porifera", endings[3]], ["Eumetazoa", 10]], //9
+            [["Cnidaria", endings[4]], ["Ctenophora", endings[5]], ["Myxozoa", endings[6]], ["Placozoa", endings[6]], ["Bilateria", 12]], //10
+            [],
+            [["Protostomia", 16], ["Dueterostomia", 17]], //12
+            [],
+            [],
+            [],
+            [["Ecdysozoa", 18], ["Chaetognatha", endings[7]], ["Spiralia", 19]],//16
+            [["Echinodermata", endings[8]], ["Hemichordata", endings[7]], ["Chordata", 20]],//17
+        ]
+        for (let i = 0; i < ans.length; i++) {
+            let cAns = ans[i];
+            let done = []
+            for (let j = 0; j < cAns.length; j++) {
+                let found = false;
+                while (found == false) {
+                    let randAns = cAns[Math.floor(Math.random() * cAns.length)]
+                    if (done.includes(randAns) == false) {
+                        done.push(randAns)
+                        found = true;
+                    }
+                }
+                let vals = done[done.length - 1]
+                $("#" + i).append(`<button onclick='change(${vals[1]})'>${vals[0]}</button>`)
+            }
+            console.log(done)
+        }
+    </script>
+</body>
+
+</html>
